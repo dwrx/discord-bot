@@ -9,7 +9,7 @@ export async function up(knex: Knex): Promise<void> {
         table.string('user_id', 255).notNullable().primary();
         table.string('is_bot', 255).notNullable();
         table.string('event', 255).notNullable();
-        table.decimal('date').notNullable();
+        table.integer('date').notNullable();
     })
 }
 

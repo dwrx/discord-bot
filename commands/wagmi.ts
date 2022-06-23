@@ -48,7 +48,7 @@ export const Wagmi: Command = {
         console.log(new Date(), `/wagmi ${address} from ${username} (${userId}): isBot=${isBot}`);
         try {
             const timestamp = Math.floor(Date.now() / 1000);
-            knex('whitelist')
+            await knex('whitelist')
                 .insert({
                     address: address,
                     username: username,
@@ -62,7 +62,7 @@ export const Wagmi: Command = {
                     address: address,
                     date: timestamp,
                 })
-                .where('user_id', userId);
+                .where('whitelist.user_id', userId);
 
                 await interaction.followUp({
                     ephemeral: true,
