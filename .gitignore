@@ -1,0 +1,4 @@
+node_modules
+config/config.json
+dev.sqlite3
+.DS_Store
