@@ -1,4 +1,5 @@
 node_modules
 config/config.json
 dev.sqlite3
+build
 .DS_Store
