@@ -66,7 +66,7 @@ export const Wagmi: Command = {
           username: username,
           user_id: userId,
           is_bot: isBot,
-          event: "closed-alpha-test",
+          event: "waitlist",
           date: timestamp,
         })
         .onConflict("user_id")
@@ -78,7 +78,7 @@ export const Wagmi: Command = {
 
       await interaction.followUp({
         ephemeral: true,
-        content: `Successfully updated your whitelisted address to \`${address}\`. **WAGMI**`,
+        content: `You are late to the first test in Devnet. But we have recorded your address for the future test sessions. WAGMI`,
       });
     } catch (e) {
       console.error(e);

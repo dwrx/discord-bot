@@ -4,9 +4,11 @@ import {
   BaseCommandInteraction,
 } from "discord.js";
 import { Wagmi } from "./commands/wagmi";
+import { Help } from "./commands/help";
+import { Address } from "./commands/address";
 import { botToken } from "./config/config.json";
 
-const Commands = [Wagmi];
+const Commands = [Wagmi, Help, Address];
 
 const client = new Client({
   intents: [],
