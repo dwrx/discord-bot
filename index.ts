@@ -6,9 +6,10 @@ import {
 import { Wagmi } from "./commands/wagmi";
 import { Help } from "./commands/help";
 import { Address } from "./commands/address";
+import { Airdrop } from "./commands/airdrop";
 import { botToken } from "./config/config.json";
 
-const Commands = [Wagmi, Help, Address];
+const Commands = [Wagmi, Help, Address, Airdrop];
 
 const client = new Client({
   intents: [],
