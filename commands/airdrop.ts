@@ -85,7 +85,7 @@ export const Airdrop: Command = {
         content: `Minting NFT...`,
       });
       const transactions = await sendAirdrop(address.toString());
-      await knex("airdrop").update({transactions: transactions}).where('address', address);
+      // await knex("airdrop").update({transactions: transactions}).where('address', address);
       await interaction.followUp({
         ephemeral: true,
         content: `Result: ${transactions.join(', ')}`,
